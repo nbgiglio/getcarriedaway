@@ -76,6 +76,7 @@ export class BodyModel {
       ys.slice(0, 60).forEach((i) => need.add(i));
       ys.slice(-60).forEach((i) => need.add(i));
     }
+    this.buildBodysuit();
     this.sub = [...need];
     this.subOf = new Map(this.sub.map((v, k) => [v, k]));
     // dense per-modifier deltas restricted to the measured vertices
@@ -96,7 +97,59 @@ export class BodyModel {
 
   modsFor(sex) { return this.modifiers[sex]; }
 
-  /** Full mesh in mm, feet on y = 0. */
+  // Bodysuit look: finds patches around the nipples and crotch on the base bodies so deform() can smooth it flat.
+  buildBodysuit() {
+    const nb = Array.from({ length: this.n }, () => new Set());
+    for (let i = 0; i < this.faces.length; i += 3) {
+      const [a, b, c] = [this.faces[i], this.faces[i + 1], this.faces[i + 2]];
+      nb[a].add(b).add(c); nb[b].add(a).add(c); nb[c].add(a).add(b);
+    }
+    this.neighbours = nb.map((s) => Uint16Array.from(s));
+    this.patches = {};
+    for (const sex of ['f', 'm']) {
+      const v = this.bodies[sex];
+      const bust = this.rulers['bust-circ'];
+      const by = bust.reduce((s, i) => s + v[i * 3 + 1], 0) / bust.length;
+      const radius = sex === 'f' ? 0.22 : 0.15; // nipple only; breast and pec shape stay
+      const patch = [];
+      for (const side of [-1, 1]) {
+        let tip = -1;
+        for (let i = 0; i < this.n; i++) {
+          const x = v[i * 3] * side, y = v[i * 3 + 1];
+          if (x > 0.3 && x < 1.6 && Math.abs(y - by) < 0.8 && (tip < 0 || v[i * 3 + 2] > v[tip * 3 + 2])) tip = i;
+        }
+        for (let i = 0; i < this.n; i++) {
+          const d = Math.hypot(v[i * 3] - v[tip * 3], v[i * 3 + 1] - v[tip * 3 + 1], v[i * 3 + 2] - v[tip * 3 + 2]);
+          if (d < radius) patch.push([i, 1 - (d / radius) ** 2]);
+        }
+      }
+      // crotch: soften the anatomy to a smooth bodysuit seam
+      const c = this.crotch[sex];
+      for (let i = 0; i < this.n; i++) {
+        const d = Math.hypot(v[i * 3] - v[c * 3], v[i * 3 + 1] - v[c * 3 + 1], v[i * 3 + 2] - v[c * 3 + 2]);
+        if (d < 0.6) patch.push([i, 1 - (d / 0.6) ** 2]);
+      }
+      this.patches[sex] = patch;
+    }
+  }
+
+  smoothPatch(sex, out) {
+    const patch = this.patches[sex];
+    const tmp = new Float32Array(patch.length * 3);
+    for (let it = 0; it < 30; it++) {
+      patch.forEach(([i], k) => {
+        const nb = this.neighbours[i];
+        let x = 0, y = 0, z = 0;
+        for (const j of nb) { x += out[j * 3]; y += out[j * 3 + 1]; z += out[j * 3 + 2]; }
+        tmp[k * 3] = x / nb.length; tmp[k * 3 + 1] = y / nb.length; tmp[k * 3 + 2] = z / nb.length;
+      });
+      patch.forEach(([i, f], k) => {
+        for (let a = 0; a < 3; a++) out[i * 3 + a] += (tmp[k * 3 + a] - out[i * 3 + a]) * f;
+      });
+    }
+  }
+
+  /** Full mesh in mm, feet on y = 0, with the bodysuit smoothing applied. */
   deform(sex, w, out = new Float32Array(this.n * 3)) {
     out.set(this.bodies[sex]);
     for (const m of this.modifiers[sex]) {
@@ -108,6 +161,7 @@ export class BodyModel {
         out[o] += t.d[i * 3] * s; out[o + 1] += t.d[i * 3 + 1] * s; out[o + 2] += t.d[i * 3 + 2] * s;
       }
     }
+    this.smoothPatch(sex, out);
     let minY = Infinity;
     for (let i = 1; i < out.length; i += 3) if (out[i] < minY) minY = out[i];
     for (let i = 0; i < out.length; i += 3) { out[i] *= 100; out[i + 1] = (out[i + 1] - minY) * 100; out[i + 2] *= 100; }

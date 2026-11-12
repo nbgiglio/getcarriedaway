@@ -1,4 +1,4 @@
-"""Bakes MakeHuman's CC0 base mesh and modelling targets into one binary file for BodyScaler.
+"""Bakes MakeHuman's CC0 base mesh and modelling targets into one binary file for Armor Scaler.
 
 Run: python3 build.py   (downloads from the makehumancommunity/makehuman repo, writes ../app/data/)
 Output: body.json (manifest) + body.bin (little-endian buffers). Units stay MakeHuman decimetres;

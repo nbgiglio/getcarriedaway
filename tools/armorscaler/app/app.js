@@ -1,4 +1,4 @@
-// BodyScaler: a measurement-driven body (MakeHuman base mesh, CC0). Type tape measurements, the
+// Armor Scaler: a measurement-driven body (MakeHuman base mesh, CC0). Type tape measurements, the
 // solver reshapes the body to match, export STL. Units in the scene are mm.
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -6,8 +6,8 @@ import { STLExporter } from 'three/addons/exporters/STLExporter.js';
 import { loadBody, MEASUREMENTS, CUPS, braSize, braToMm } from './body.js';
 
 const $ = (id) => document.getElementById(id);
-const PRESET_KEY = 'gca.bodyscaler.presets';
-const UNITS_KEY = 'gca.bodyscaler.units';
+const PRESET_KEY = 'gca.armorscaler.presets';
+const UNITS_KEY = 'gca.armorscaler.units';
 
 // ---------- scene ----------
 const stage = $('stage');
@@ -29,7 +29,7 @@ scene.add(camera);
 scene.add(new THREE.GridHelper(3000, 30, 0x3a3c43, 0x26272c));
 
 const bodyGeo = new THREE.BufferGeometry();
-const bodyMesh = new THREE.Mesh(bodyGeo, new THREE.MeshStandardMaterial({ color: 0xd9b49a, roughness: 0.65, metalness: 0.02 }));
+const bodyMesh = new THREE.Mesh(bodyGeo, new THREE.MeshStandardMaterial({ color: 0x8d96a3, roughness: 0.8, metalness: 0.02 }));
 scene.add(bodyMesh);
 const ruler = new THREE.Line(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({ color: 0xffb84d, depthTest: false }));
 ruler.renderOrder = 10;

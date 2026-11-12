@@ -140,3 +140,18 @@ p{margin:0}
 .twocol>div{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:16px}
 .twocol p{color:var(--ink-2)}.twocol p b{color:var(--ink)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* external tools */
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.menu{max-height:calc(100vh - 100px);overflow:auto}
+.menu .ext{list-style:none;margin:0;padding:0 2px;display:flex;flex-direction:column}
+.menu .ext a{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--ink);font-weight:500}
+.menu .ext a:hover{background:var(--raised);color:var(--amber)}
+.menu .ext a svg{color:var(--muted)}
+.ext-group{display:flex;flex-direction:column;gap:12px}
+.ext-card{text-decoration:none;color:var(--ink);gap:8px}
+.ext-card:hover{border-color:var(--amber)}
+.ext-card .t{display:flex;align-items:center;gap:8px}
+.ext-card .t svg{color:var(--muted)}
+.ext-card .host{font:500 11px var(--mono);letter-spacing:.06em;color:var(--muted);margin-top:auto}
+@media (max-width:760px){.menu{max-height:none;overflow:visible}.menu .ext a{font-size:18px;padding:12px 4px}}

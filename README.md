@@ -1,8 +1,16 @@
-# Lightbench
+# Get Carried Away
 
-Projects sewing patterns at true size onto a cutting mat. Runs in the browser on a tablet or laptop connected to a projector. Live at https://getcarriedaway.art.
+Cosplay and costuming portfolio for Carrie and Nick, plus the tools we build. Live at https://getcarriedaway.art.
 
-- Single static page: `index.html`. No build step.
+| Path | Page |
+|---|---|
+| `/` | Home |
+| `/carrie/` | Carrie's Work |
+| `/nick/` | Nick's Work |
+| `/tools/lightbench/` | Lightbench instructions |
+| `/tools/lightbench/app/` | Lightbench app (single static page) |
+
+- Plain static HTML; no build step. Shared styles in `assets/site.css`, menu and filter script in `assets/site.js`.
 - Hosted on GitHub Pages from `main` / root. `CNAME` sets the custom domain.
-- Libraries load from cdnjs (pdf.js 3.11.174) and Google Fonts.
-- Projects and calibration are stored in the browser's IndexedDB on each device. Nothing is uploaded.
+- Placeholders in `[brackets]` are photos and copy still to supply. A photo goes in by replacing a placeholder's `<span class="label">` with `<img src="..." alt="...">`.
+- Lightbench stores projects and calibration in the browser (IndexedDB) on each device. Nothing is uploaded.

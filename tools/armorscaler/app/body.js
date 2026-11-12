@@ -105,6 +105,7 @@ export class BodyModel {
       nb[a].add(b).add(c); nb[b].add(a).add(c); nb[c].add(a).add(b);
     }
     this.neighbours = nb.map((s) => Uint16Array.from(s));
+    this.smoothIters = 100;
     this.patches = {};
     for (const sex of ['f', 'm']) {
       const v = this.bodies[sex];
@@ -136,7 +137,7 @@ export class BodyModel {
   smoothPatch(sex, out) {
     const patch = this.patches[sex];
     const tmp = new Float32Array(patch.length * 3);
-    for (let it = 0; it < 30; it++) {
+    for (let it = 0; it < this.smoothIters; it++) {
       patch.forEach(([i], k) => {
         const nb = this.neighbours[i];
         let x = 0, y = 0, z = 0;

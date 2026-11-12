@@ -155,3 +155,10 @@ p{margin:0}
 .ext-card .t svg{color:var(--muted)}
 .ext-card .host{font:500 11px var(--mono);letter-spacing:.06em;color:var(--muted);margin-top:auto}
 @media (max-width:760px){.menu{max-height:none;overflow:visible}.menu .ext a{font-size:18px;padding:12px 4px}}
+
+/* brand logo */
+.brand img{height:52px;width:auto}
+.site-header .wrap{min-height:72px;padding-block:10px}
+@media (max-width:760px){.brand img{height:44px}}
+.hero .ph.portrait{flex:0 1 460px;height:clamp(360px,44vw,560px)}
+.hero .lead+.lead{margin-top:-8px}

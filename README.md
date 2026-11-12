@@ -9,8 +9,10 @@ Cosplay and costuming portfolio for Carrie and Nick, plus the tools we build. Li
 | `/nick/` | Nick's Work |
 | `/tools/lightbench/` | Lightbench instructions |
 | `/tools/lightbench/app/` | Lightbench app (single static page) |
+| `/tools/helmetscaler/app/` | HelmetScaler: fit a helmet STL to a sized head, section view, strip cutter |
 
 - Plain static HTML; no build step. Shared styles in `assets/site.css`, menu and filter script in `assets/site.js`.
 - Hosted on GitHub Pages from `main` / root. `CNAME` sets the custom domain.
 - Placeholders in `[brackets]` are photos and copy still to supply. A photo goes in by replacing a placeholder's `<span class="label">` with `<img src="..." alt="...">`.
 - Lightbench stores projects and calibration in the browser (IndexedDB) on each device. Nothing is uploaded.
+- HelmetScaler loads three.js from jsDelivr and the two reference heads from `tools/helmetscaler/app/models/` (meshopt-compressed GLB, mm units). Presets live in localStorage. STLs never leave the browser.

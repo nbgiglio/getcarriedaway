@@ -50,6 +50,7 @@ p{margin:0}
 .tools{position:relative}
 .menu{position:absolute;right:0;top:calc(100% + 10px);width:340px;padding:10px;border-radius:14px;background:var(--surface);border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.45)}
 .menu .eyebrow{display:block;padding:10px 12px 6px;font-size:11px}
+.tool-card+.tool-card{margin-top:8px}
 .tool-card{padding:14px;border-radius:10px;background:var(--raised);display:flex;flex-direction:column;gap:10px}
 .tool-card .name{display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px}
 .tool-card p{font-size:14px;color:var(--muted)}

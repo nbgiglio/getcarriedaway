@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#141416">
+<title>HelmetScaler</title>
+<meta name="description" content="Fit a helmet STL to a scalable head, check it in section, and cut print strips. Runs in your browser.">
+<link rel="icon" href="/assets/brand/gca-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+<style>
+/* Full-bleed 3D stage with a scrolling control panel on the right (bottom sheet on phones). Same dark tool look as Lightbench. */
+:root{
+  --stage:#141416; --ink:#e9ecef; --dim:#8a93a0; --panel:#17191e; --line:#2a2f37; --chip:#1e232a;
+  --accent:#ffb84d; --accent-ink:#1a1206; --helmet:#7fd0ff;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+html,body{height:100%;margin:0;overflow:hidden;background:var(--stage);color:var(--ink);font-family:var(--sans)}
+button,input,select{font:inherit;color:inherit}
+[hidden]{display:none!important}
+#app{display:grid;grid-template-columns:1fr 360px;height:100%}
+#stage{position:relative;min-width:0;min-height:0;touch-action:none}
+#stage canvas{display:block}
+#panel{background:var(--panel);border-left:1px solid var(--line);overflow:auto;padding-bottom:env(safe-area-inset-bottom)}
+#top{position:absolute;left:12px;top:calc(env(safe-area-inset-top,0px) + 12px);display:flex;gap:8px;align-items:center}
+#top a{color:var(--dim);text-decoration:none;font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:10px 12px;border-radius:8px;background:#0008}
+#top a:hover{color:var(--accent)}
+#loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--dim);font:500 13px var(--mono);letter-spacing:.12em;pointer-events:none}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:14px 16px;font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:16px}
+details[open] summary::after{content:"−"}
+details[open] summary{color:var(--ink)}
+.sec{padding:0 16px 16px;display:flex;flex-direction:column;gap:10px}
+.btns{display:flex;flex-wrap:wrap;gap:6px}
+.tb{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:0 12px;border-radius:8px;border:1px solid var(--line);background:var(--chip);cursor:pointer;font-size:13px}
+.tb:hover:not(:disabled){border-color:#4a4d55}
+.tb[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.tb.go{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.tb:disabled{opacity:.4;cursor:default}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px}
+.ctl{display:grid;grid-template-columns:92px 28px 1fr 28px 72px;gap:6px;align-items:center;font-size:12px}
+.ctl label{color:var(--dim)}
+.ctl input[type=range]{width:100%;accent-color:var(--accent);margin:0}
+.ctl input[type=number]{width:100%;box-sizing:border-box;background:var(--chip);border:1px solid var(--line);border-radius:6px;padding:5px 6px;font:12px var(--mono);text-align:right}
+.nb{height:28px;border-radius:6px;border:1px solid var(--line);background:var(--chip);cursor:pointer;padding:0;font-size:15px;line-height:1}
+.gap{height:4px}
+.off{opacity:.35;pointer-events:none}
+.note{margin:0;font-size:12px;line-height:1.5;color:var(--dim)}
+.note b{color:var(--ink);font-weight:500}
+.val{font:500 13px var(--mono);color:var(--ink)}
+.inp,select{width:100%;box-sizing:border-box;background:var(--chip);border:1px solid var(--line);border-radius:6px;padding:7px 8px;font-size:13px}
+.slide{display:grid;grid-template-columns:20px 1fr;gap:8px;align-items:center;font:500 12px var(--mono);color:var(--dim)}
+.slide input{accent-color:var(--accent);width:100%}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#toast{position:fixed;left:calc(50% - 180px);bottom:calc(env(safe-area-inset-bottom,0px) + 24px);transform:translateX(-50%);z-index:10;padding:10px 16px;border-radius:999px;background:#fff;color:#111;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;max-width:calc(100vw - 420px)}
+#toast.show{opacity:1}
+#drop{position:fixed;inset:0;z-index:20;border:3px dashed var(--accent);display:none;place-items:center;font:600 20px var(--sans);color:var(--accent);background:#000a}
+body.dragging #drop{display:grid}
+@media (max-width:820px){
+  #app{grid-template-columns:1fr;grid-template-rows:55% 45%}
+  #panel{border-left:0;border-top:1px solid var(--line)}
+  #toast{left:50%;max-width:calc(100vw - 32px);bottom:calc(45% + 12px)}
+}
+@media (prefers-reduced-motion:reduce){#toast{transition:none}}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="stage">
+    <div id="top"><a href="/">← Get Carried Away</a><button class="tb" id="bView" type="button">Fit view</button></div>
+    <div id="loading">LOADING HEADS…</div>
+  </div>
+
+  <aside id="panel" aria-label="Controls">
+    <details open>
+      <summary>Head</summary>
+      <div class="sec">
+        <div class="seg" role="group" aria-label="Head model">
+          <button class="tb" type="button" data-model="male" aria-pressed="true">Male</button>
+          <button class="tb" type="button" data-model="female" aria-pressed="false">Female</button>
+        </div>
+        <p class="note">Size <span class="val" id="headDims">–</span></p>
+        <div id="headCtls" class="sec" style="padding:0"></div>
+        <div class="btns">
+          <button class="tb" type="button" id="bResetHead">Reset size</button>
+          <button class="tb" type="button" id="bXray" aria-pressed="false">See-through head</button>
+        </div>
+        <div class="btns">
+          <button class="tb" type="button" id="bScan">Load head scan (STL)</button>
+          <button class="tb" type="button" id="bClearScan" hidden>Back to model</button>
+        </div>
+        <p class="note" id="scanInfo" hidden></p>
+        <input type="file" id="fScan" accept=".stl" hidden>
+      </div>
+    </details>
+
+    <details open>
+      <summary>Helmet</summary>
+      <div class="sec">
+        <div class="btns">
+          <button class="tb go" type="button" id="bHelmet">Open helmet STL</button>
+          <button class="tb needs-helmet" type="button" id="bResetHelmet" disabled>Reset</button>
+          <button class="tb needs-helmet" type="button" id="bExportHelmet" disabled>Export STL</button>
+        </div>
+        <p class="note" id="helmetName">Or drop an STL anywhere on the page.</p>
+        <input type="file" id="fHelmet" accept=".stl" hidden>
+        <div id="helmetCtls" class="sec off" style="padding:0"></div>
+      </div>
+    </details>
+
+    <details>
+      <summary>Section view</summary>
+      <div class="sec">
+        <div class="seg" role="group" aria-label="Section axis">
+          <button class="tb" type="button" data-sec="off" aria-pressed="true">Off</button>
+          <button class="tb" type="button" data-sec="x" aria-pressed="false">X</button>
+          <button class="tb" type="button" data-sec="y" aria-pressed="false">Y</button>
+          <button class="tb" type="button" data-sec="z" aria-pressed="false">Z</button>
+          <button class="tb" type="button" data-sec="all" aria-pressed="false">All</button>
+        </div>
+        <label class="slide" id="sec_x">X<input type="range" id="secr_x" min="0" max="1" step="0.001" value="0.5" aria-label="Section X"></label>
+        <label class="slide" id="sec_y">Y<input type="range" id="secr_y" min="0" max="1" step="0.001" value="0.5" aria-label="Section Y"></label>
+        <label class="slide" id="sec_z">Z<input type="range" id="secr_z" min="0" max="1" step="0.001" value="0.5" aria-label="Section Z"></label>
+        <p class="note">Hides everything past the plane so you can see the gap between head and helmet. View only.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Strip cutter</summary>
+      <div class="sec">
+        <div class="seg" role="group" aria-label="Cut axis">
+          <button class="tb needs-helmet" type="button" data-cut="x" aria-pressed="false" disabled>Cut X</button>
+          <button class="tb needs-helmet" type="button" data-cut="y" aria-pressed="false" disabled>Cut Y</button>
+          <button class="tb needs-helmet" type="button" data-cut="z" aria-pressed="false" disabled>Cut Z</button>
+        </div>
+        <div id="cutCtls" class="sec off" style="padding:0"></div>
+        <div class="btns">
+          <button class="tb needs-helmet" type="button" id="bPreviewStrip" disabled>Preview strip</button>
+          <button class="tb" type="button" id="bCancelStrip" disabled>Cancel preview</button>
+          <button class="tb go needs-helmet" type="button" id="bExportStrip" disabled>Export strip</button>
+        </div>
+        <p class="note">Cuts a closed slice of the helmet for a quick test print. The strip exports in the same position as the fitted helmet.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Presets</summary>
+      <div class="sec">
+        <select id="presetSel" aria-label="Saved presets"></select>
+        <div class="btns">
+          <button class="tb" type="button" id="bLoadPreset">Load</button>
+          <button class="tb" type="button" id="bDeletePreset">Delete</button>
+        </div>
+        <input class="inp" id="presetName" placeholder="Preset name" aria-label="Preset name">
+        <button class="tb" type="button" id="bSavePreset">Save current</button>
+        <p class="note">Saves the head model, head size and helmet position in this browser only.</p>
+      </div>
+    </details>
+  </aside>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="drop">Drop the helmet STL</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

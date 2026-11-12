@@ -86,7 +86,7 @@ function buildRows() {
     }
     const row = document.createElement('div');
     row.className = 'mrow';
-    row.dataset.sex = m.sex || '';
+    row.dataset.only = m.sex || '';
     const id = 'm_' + m.id;
     row.innerHTML = `<label for="${id}" title="${m.tip || ''}">${m.label}</label><input id="${id}" type="number" step="0.1" inputmode="decimal"><button class="unpin" type="button" aria-label="Clear ${m.label}" title="Clear">×</button><span class="warn"></span>`;
     const [, input, unpin] = row.children;
@@ -162,7 +162,7 @@ function setSex(sex) {
   S.sex = sex;
   if (sex === 'm') delete S.pins['underbust-circ'];
   S.w = { weight: S.w.weight || 0, muscle: S.w.muscle || 0 };
-  document.querySelectorAll('[data-sex]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.sex === sex));
+  document.querySelectorAll('button[data-sex]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.sex === sex));
   rebuild();
 }
 function setUnits(u) {
@@ -173,7 +173,7 @@ function setUnits(u) {
 }
 
 function wire() {
-  document.querySelectorAll('[data-sex]').forEach((b) => b.addEventListener('click', () => setSex(b.dataset.sex)));
+  document.querySelectorAll('button[data-sex]').forEach((b) => b.addEventListener('click', () => setSex(b.dataset.sex)));
   document.querySelectorAll('[data-units]').forEach((b) => b.addEventListener('click', () => setUnits(b.dataset.units)));
   for (const k of ['weight', 'muscle']) $(k).addEventListener('input', () => { S.w[k] = +$(k).value; rebuild(); });
   $('bClearAll').addEventListener('click', () => { S.pins = {}; S.w = {}; rebuild(); });
@@ -205,7 +205,7 @@ function wire() {
     const p = readPresets()[$('presetSel').value];
     if (!p) return;
     S.sex = p.sex; S.pins = { ...p.pins }; S.w = { ...p.w };
-    document.querySelectorAll('[data-sex]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.sex === S.sex));
+    document.querySelectorAll('button[data-sex]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.sex === S.sex));
     rebuild();
   });
   $('bDelete').addEventListener('click', () => {

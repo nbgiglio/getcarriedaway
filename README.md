@@ -12,7 +12,7 @@ Cosplay and costuming portfolio for Carrie and Nick, plus the tools we build. Li
 | `/tools/helmetscaler/app/` | HelmetScaler: fit a helmet STL to a sized head, section view, strip cutter |
 | `/tools/armorscaler/app/` | Armor Scaler: body shaped from tape measurements, STL export |
 
-- Plain static HTML; no build step. Shared styles in `assets/site.css`, menu and filter script in `assets/site.js`.
+- Plain static HTML. The shared pages (home, portfolios, Lightbench instructions, 404) are generated: edit `build/pages.py`, then run `python3 build/pages.py .` — hand edits to those five HTML files are overwritten. Shared styles in `assets/site.css`, menu and filter script in `assets/site.js`.
 - Hosted on GitHub Pages from `main` / root. `CNAME` sets the custom domain.
 - Placeholders in `[brackets]` are photos and copy still to supply. A photo goes in by replacing a placeholder's `<span class="label">` with `<img src="..." alt="...">`.
 - Lightbench stores projects and calibration in the browser (IndexedDB) on each device. Nothing is uploaded.

@@ -3,16 +3,18 @@
   /* dark theme: night sky from the logo */
   --ground:#17171a; --band:#1d1b25; --surface:#211f2b; --raised:#2b2838; --line:#302c3e; --line-2:#3d3850; --line-3:#544c6d;
   --ink:#f2efe9; --ink-2:#d0cbdc; --muted:#a9a3bd;
+  --logo-ink:#f2efe9; --logo-away:#b48cff; --logo-away-shadow:#5b3aa8;
   --accent:#b48cff; --accent-ink:#2a1f4a; --accent-hover:#c6a8ff; --accent-text:#b48cff;
   --amber:#f7b34c; --amber-ink:#2a1f4a; --amber-hover:#f9c46f; --amber-text:#f7b34c; --grain:#7fd0ff;
   --shadow:0 18px 40px rgba(0,0,0,.45);
-  --display:"Baloo 2",system-ui,sans-serif; --sans:"Nunito",system-ui,-apple-system,sans-serif; --script:"Caveat Brush","Segoe Print",cursive; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --display:"Baloo 2",system-ui,sans-serif; --sans:"Nunito",system-ui,-apple-system,sans-serif; --script:"Caveat","Segoe Print",cursive; --logo-script:"Pacifico",cursive; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   color-scheme:dark;
 }
 @media (prefers-color-scheme:light){:root{
   /* light theme: cream sky from the logo */
   --ground:#f6f1e7; --band:#efe8f6; --surface:#fffaf1; --raised:#f1eadc; --line:#e2d9c8; --line-2:#d6cbb6; --line-3:#b9ad97;
   --ink:#2a1f4a; --ink-2:#463c63; --muted:#5e5677;
+  --logo-ink:#2a1f4a; --logo-away:#8a5cf6; --logo-away-shadow:#d9cdf2;
   --accent:#5b3aa8; --accent-ink:#ffffff; --accent-hover:#4a2d8f; --accent-text:#5b3aa8;
   --amber:#f7b34c; --amber-ink:#2a1f4a; --amber-hover:#f5a52c; --amber-text:#8a5200;
   --shadow:0 18px 40px rgba(42,31,74,.16);
@@ -28,7 +30,7 @@ img{max-width:100%;display:block}
 .wrap{max-width:1280px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
 @media (min-width:720px){.wrap{padding-left:max(32px,env(safe-area-inset-left));padding-right:max(32px,env(safe-area-inset-right))}}
 
-.eyebrow{font:400 24px/1.1 var(--script);color:var(--muted)}
+.eyebrow{font:600 26px/1.1 var(--script);color:var(--muted)}
 .eyebrow.accent{color:var(--accent-text)}.eyebrow.amber{color:var(--amber-text)}
 h1,h2,h3,.display{font-family:var(--display);font-weight:800;letter-spacing:-.01em;text-wrap:balance;margin:0}
 h1{font-size:clamp(46px,6.4vw,92px);line-height:1;letter-spacing:-.015em}
@@ -49,7 +51,7 @@ p{margin:0}
 .site-header{position:relative;z-index:20;border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-.brand .name{font:800 25px/1 var(--display);white-space:nowrap}.brand .away{font:400 30px/1 var(--script);color:var(--accent-text);margin-left:2px;display:inline-block;transform:rotate(-4deg) translateY(2px)}
+.brand .name{font:800 26px/1 var(--display);color:var(--logo-ink);white-space:nowrap}.brand .away{font:400 26px/1 var(--logo-script);color:var(--logo-away);text-shadow:2px 2px 0 var(--logo-away-shadow);margin-left:4px;display:inline-block;transform:rotate(-6deg) translateY(-2px)}
 .brand svg{flex:none}
 .nav{display:flex;align-items:center;gap:4px}
 .nav>a,.nav .tools-btn{display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:8px;text-decoration:none;font:700 16px var(--sans);color:var(--ink);background:none;border:1px solid transparent;cursor:pointer}
@@ -61,7 +63,7 @@ p{margin:0}
 .nav .tools-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
 .tools{position:relative}
 .menu{position:absolute;right:0;top:calc(100% + 10px);width:340px;padding:10px;border-radius:14px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow)}
-.menu .eyebrow{display:block;padding:10px 12px 4px;font-size:21px}
+.menu .eyebrow{display:block;padding:10px 12px 4px;font-size:22px}
 .tool-card+.tool-card{margin-top:8px}
 .tool-card{padding:14px;border-radius:10px;background:var(--raised);display:flex;flex-direction:column;gap:10px}
 .tool-card .name{display:flex;align-items:center;gap:10px;font-weight:600;font-size:17px}
@@ -179,5 +181,5 @@ p{margin:0}
 .notch{background:var(--amber)}
 .footer-logo{display:block;width:min(340px,100%);height:auto}
 .site-footer .wrap{align-items:center}
-@media (max-width:760px){.brand picture,.brand img{height:44px}.brand .name{font-size:22px}.brand .away{font-size:26px}}
+@media (max-width:760px){.brand picture,.brand img{height:44px}.brand .name{font-size:22px}.brand .away{font-size:22px}}
 @media (max-width:360px){.brand .away{display:none}}

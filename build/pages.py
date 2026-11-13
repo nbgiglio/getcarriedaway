@@ -62,7 +62,7 @@ def header(cur):
     tc = ' current' if cur == 'tools' else ''
     return f'''<header class="site-header">
 <div class="wrap">
-<a class="brand" href="/" aria-label="Get Carrie’d Away, home"><picture><source srcset="/assets/brand/gca-balloon.svg" media="(prefers-color-scheme: light)"><img src="/assets/brand/gca-icon-dark-bg.svg" alt="" width="160" height="160"></picture><span class="name">Get Carrie’d</span><span class="away">Away</span></a>
+<a class="brand" href="/" aria-label="Get Carrie’d Away, home"><picture><source srcset="/assets/brand/gca-logo-header-on-light.svg" media="(prefers-color-scheme: light)"><img src="/assets/brand/gca-logo-header.svg" alt="Get Carrie’d Away" width="746" height="416"></picture></a>
 <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
 <svg class="i-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
 <svg class="i-close" hidden width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>

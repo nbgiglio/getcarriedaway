@@ -13,7 +13,7 @@ CARRIE = [
     facts=[('Character', 'Maia Tamarin'), ('Source', 'Spin the Dawn, Elizabeth Lim (2019)'), ('Contest', 'Dragon Con Page to Stage'), ('Skill tier', 'Journeyman'), ('Cost', 'About $200'), ('Pattern', 'Self-designed')],
     intro=[
       "In Elizabeth Lim’s Spin the Dawn, Maia Tamarin competes to become the imperial tailor and is given an impossible task: sew three magical gowns embodying the three children of the mother goddess Amana, the Sun, the Moon and the Stars, woven from the laughter of the Sun, the tears of the Moon and the blood of the Stars.",
-      "This build interprets the bridal dress of the Stars: an iridescent colour-shift gown of deep night, worn under a black glittering veil and a black-as-night robe whose interior carries an appliqué scene of Amana’s children, as told in the old monk’s legend. Closed, the robe reads as night sky. Opened, it reveals the whole mythology.",
+      "This build interprets the bridal dress of the Stars: an iridescent color-shift gown of deep night, worn under a black glittering veil and a black-as-night robe whose interior carries an appliqué scene of Amana’s children, as told in the old monk’s legend. Closed, the robe reads as night sky. Opened, it reveals the whole mythology.",
     ],
     quote='As the Moon cries, the Sun laughs, and the Stars bleed; it painted such a beautiful picture in my mind. This was my inspiration in the making.',
     sections=[
@@ -22,20 +22,20 @@ CARRIE = [
         "The book doesn’t give a time period or place, so I went with a traditional hanfu gown with a dramatic flair. I made a pattern for the robe’s sleeves, then used it to draw out the Moon and Sun characters to fit.",
       ], images=[('i-008', 'Original concept art, the full bridal gown'), ('i-010', 'Full-scale figure drawing, the source for the robe scene'), ('i-009', 'Draping the neckline on the form'), ('i-011', 'Silhouette pieces cut in paper and foam')]),
       dict(title='Materials', paras=[], table=(['Component', 'Material', 'Amount'], [
-        ['Gown shell', 'Iridescent colour-shift spandex', '4 yd'], ['Overlay', 'Beaded ombré net and glitter mesh', '1.5 yd'], ['Underskirt', 'Pleated metallic', '1 yd'],
+        ['Gown shell', 'Iridescent color-shift spandex', '4 yd'], ['Overlay', 'Beaded ombré net and glitter mesh', '1.5 yd'], ['Underskirt', 'Pleated metallic', '1 yd'],
         ['Robe shell and lining', 'Black glittering knit and satin', '4 yd'], ['Appliqué', 'Spandex over EVA foam, rhinestone trim', '2 yd']]),
         tags=['Machine sewing', 'Foam appliqué', 'Rhinestone trim', 'Draping', 'Hand-beading'],
-        images=[('i-012', 'Colour-shift spandex and glitter mesh'), ('i-013', 'Iridescent overlay mesh'), ('i-014', 'Beaded ombré overlay yardage'), ('i-015', 'Beaded net, detail')]),
+        images=[('i-012', 'Color-shift spandex and glitter mesh'), ('i-013', 'Iridescent overlay mesh'), ('i-014', 'Beaded ombré overlay yardage'), ('i-015', 'Beaded net, detail')]),
       dict(title='Constructing the gown', paras=[
-        "The base gown was fitted on the form in the colour-shift spandex, then layered with the beaded overlay. I went through a few neckline iterations before landing on the final, simpler and more traditional hanfu style. It just felt more imperial.",
+        "The base gown was fitted on the form in the color-shift spandex, then layered with the beaded overlay. I went through a few neckline iterations before landing on the final, simpler and more traditional hanfu style. It just felt more imperial.",
         "I then made a pleated metallic underskirt over a mermaid crinoline. This was my first time using a heavily beaded fabric: I crushed the beads along the outside edge with a hammer to get a smooth, machine-sewable surface.",
       ], images=[('i-016', 'Keyhole bodice mock-up on the form'), ('i-017', 'Sweetheart bodice fitting'), ('i-018', 'Skirt panels laid out'), ('i-019', 'Gown, overlay and neckpiece, flat'), ('i-020', 'Beaded overlay with gold band'), ('i-021', 'Pleated metallic underskirt')]),
       dict(title='Building the robe scene', paras=[
-        "Each figure and celestial motif was built by stretching colour-shift spandex over EVA foam, outlined in rhinestone trim, and mounted to the robe’s glittering iridescent background. I glued the appliqués down with Fabri-Tac, since they’re too thick to sew.",
+        "Each figure and celestial motif was built by stretching color-shift spandex over EVA foam, outlined in rhinestone trim, and mounted to the robe’s glittering iridescent background. I glued the appliqués down with Fabri-Tac, since they’re too thick to sew.",
         "The Sun smiles with topaz jewels while the Moon cries with blue. Both bodies are filled with around 500 rhinestone crystals representing the blood of the Stars.",
       ], images=[('i-022', 'Figure pieces, rhinestone-edged'), ('i-023', 'Robed-figure reveal panels'), ('i-024', 'Banding the silhouette outline'), ('i-025', 'Spandex stretched over EVA foam, underside finished'), ('i-026', 'Stone-set motif, front'), ('i-027', 'Moon medallion, foam cut and shading'), ('i-028', 'Robe lining and bound edge')]),
       dict(title='The reveal: the blood of the Stars', paras=[
-        "The robe hides the Sun and the Moon in the night on the outside. Opened, the blood of the Stars raining down from the centre of the dress reveals their story.",
+        "The robe hides the Sun and the Moon in the night on the outside. Opened, the blood of the Stars raining down from the center of the dress reveals their story.",
       ], images=[('i-029', 'Closed: the night'), ('i-000', 'Opened: the three children'), ('i-031', 'From behind: pure night'), ('i-032', 'Moon figure with blue jewels'), ('i-033', 'Sun figure with topaz jewels'), ('i-034', 'Jewel application in progress')]),
       dict(title='Accessories, wig and veil', paras=[
         "**Slippers.** A plain pair of slippers, embellished with black and purple acrylic paint and iridescent rhinestones. Small changes made a big impact.",
@@ -43,7 +43,7 @@ CARRIE = [
         "**Veil.** The book describes the veil as “a piece of extra cloth”. I plan to add more jewels to the edges and contour it to my face.",
         "**Sash (dai).** Black sequin material over black canvas, with rhinestone trim and two large handmade beaded tassels.",
         "**Inner robe (moxiong).** Underneath everything is a basic black robe with long sleeves for modesty.",
-      ], images=[('i-035', 'Original slippers'), ('i-036', 'Slippers after painting and jewelling'), ('i-037', 'Wig braided into low buns, with the crystal-drip veil'), ('i-038', 'Sash with beaded fringe and handmade tassels'), ('i-039', 'Inner robe (moxiong)')]),
+      ], images=[('i-035', 'Original slippers'), ('i-036', 'Slippers after painting and jeweling'), ('i-037', 'Wig braided into low buns, with the crystal-drip veil'), ('i-038', 'Sash with beaded fringe and handmade tassels'), ('i-039', 'Inner robe (moxiong)')]),
       dict(title='Challenges', paras=[
         "**Materials.** Maia often speaks of silk, but I couldn’t justify around $400 in fabric alone. Since this hanfu is made from celestial materials, I decided satin, spandex and mesh that gave the ethereal look were fair game. It may not be correct, but I think it’s stunning, and the whole build came in around $200.",
         "**Beaded fabric.** Sewing it was brand new to me, and I didn’t like it. Smashing beads and breaking needles is not a pleasant way to work. I did it anyway, in a full face mask, slowly. Endurance is a must when bringing a story to life.",
@@ -63,7 +63,7 @@ CARRIE = [
       dict(title='Starting point', paras=[], images=[('i-000', 'The AI rendering the design started from')]),
       dict(title='The lamp skirt', paras=[
         "This skirt was my first dive into thermoplastics (I know, ambitious). I wanted to keep the traditional princess skirt from the 1600s, gathered at the top, while giving the lamp shape a nod.",
-        "I made a panel mock-up in fabric, measured the sections, then cut 10-gauge aluminium wire to size. Bending became easier once I built a wooden curve to heat the wire on. I welded the pieces together with a blowtorch (so. hot.).",
+        "I made a panel mock-up in fabric, measured the sections, then cut 10-gauge aluminum wire to size. Bending became easier once I built a wooden curve to heat the wire on. I welded the pieces together with a blowtorch (so. hot.).",
         "Then I used a heat gun to work clear TransparArt Worbla into a flowing gown shape. I learned many expensive lessons molding it, but the result was wonderful: a clear skirt.",
         "Next came the hand-cut EVA pieces. I designed each panel to feature one of the seven dwarves, with floral details and lines reminiscent of stained glass. Last, I painted the skirt with acrylic thinned with clear glue so the 80 tea lights on my homemade underskirt could shine through. I added a bow to the back and called it done.",
       ], images=[]),
@@ -90,16 +90,16 @@ CARRIE = [
     quote='How magical it would be to have Falkor and Gmork circling around me, the way the birds wrap Cinderella’s dress in ribbons.',
     sections=[
       dict(title='The spark', paras=[
-        "The idea crystallised after a short clip from Cinderella, where the birds circle her and wrap her dress in ribbons. I was also inspired by the costumes of the Miss Thailand competitions, where contestants wear enormous, elaborate and even moving sculptures. I wanted that same grandeur and movement: an unforgettable display that’s as much art as costume. And it still had to fit through doorways.",
+        "The idea crystallized after a short clip from Cinderella, where the birds circle her and wrap her dress in ribbons. I was also inspired by the costumes of the Miss Thailand competitions, where contestants wear enormous, elaborate and even moving sculptures. I wanted that same grandeur and movement: an unforgettable display that’s as much art as costume. And it still had to fit through doorways.",
       ], images=[('image1', 'Concept drawing')]),
       dict(title='Falkor', paras=[
         "Falkor was the most challenging piece. His tall, narrow form needed a frame that would move gracefully without folding in on itself or toppling over: lightweight and extremely strong.",
-        "I learned to bend PVC pipe by filling it with heated sand. Most tutorials used three-foot sections; Falkor needed nine feet. In heat-resistant gloves I taped one end, funnelled in the hot sand and bent the pipe over the curve of an old barrel before it cooled.",
+        "I learned to bend PVC pipe by filling it with heated sand. Most tutorials used three-foot sections; Falkor needed nine feet. In heat-resistant gloves I taped one end, funneled in the hot sand and bent the pipe over the curve of an old barrel before it cooled.",
         "The frame was wrapped in pool noodles for bulk and packing foam to smooth the contours. His face is sculpted EVA with tiny individually shaped teeth, his eyes are ping-pong balls, his fur is soft faux fur, and his scales are over a thousand hand-laid white and iridescent sequins. A set of long false eyelashes finishes his expression.",
       ], images=[('image7', 'Sand-bent PVC spine wrapped in pool noodles'), ('image6', 'Building up the body'), ('image4', 'Sculpted EVA face with ping-pong ball eyes'), ('image5', 'Faux fur and sequin scales going on'), ('image33', 'Falkor on his mount')]),
       dict(title='Gmork', paras=[
         "Gmork was planned full size, a large imposing wolf to contrast with Falkor, built the same way with an EVA face and dark faux fur. Mounted on his rods he looked too cartoonish and overpowered the display.",
-        "In the story Gmork isn’t the victor; he’s the harbinger of the Nothing. So I cut his body in half, reinforced it with a steel rod and set him lower, partly grounded. He stays menacing without taking over. Imagination and hope had to take centre stage.",
+        "In the story Gmork isn’t the victor; he’s the harbinger of the Nothing. So I cut his body in half, reinforced it with a steel rod and set him lower, partly grounded. He stays menacing without taking over. Imagination and hope had to take center stage.",
       ], images=[('image8', 'Gmork taking shape'), ('image9', 'Cut down to size and set low on the base')]),
       dict(title='The Empress’s gown', paras=[
         "I wanted my own vision of what the Childlike Empress might wear: the elegance of the original with more texture and dimension, reading well up close and from across a room.",
@@ -108,8 +108,8 @@ CARRIE = [
       ], images=[('image13', 'Hand-placing pearls on the quilted shell'), ('image11', 'Bodice fitting'), ('image15', 'Southern Oracle figures, painted and beaded'), ('image16', 'Beading the wings'), ('image17', 'Oracles mounted at the shoulders'), ('image14', 'Gown fitting')]),
       dict(title='The track', paras=[
         "The vision was a train-track system that would carry Falkor and Gmork around me continuously while I could still walk and move inside it. I had never built a moving mechanism, so my husband helped me learn 3D printing.",
-        "We printed several iterations of the track, which works like the gears of a clock. At times success and failure were a fraction of a millimetre apart: if the pieces didn’t meet perfectly, the whole system bound up.",
-        "The track sits on a circular wooden base with the centre cut out so I can stand inside it. A small 6 V motor drives it, and eight ball-bearing rollers underneath keep the motion smooth.",
+        "We printed several iterations of the track, which works like the gears of a clock. At times success and failure were a fraction of a millimeter apart: if the pieces didn’t meet perfectly, the whole system bound up.",
+        "The track sits on a circular wooden base with the center cut out so I can stand inside it. A small 6 V motor drives it, and eight ball-bearing rollers underneath keep the motion smooth.",
       ], images=[('image21', 'Laying out the printed track'), ('image20', 'Track sections'), ('image22', '3D-printed gear and motor mount'), ('image19', 'Ball-bearing roller'), ('image23', 'Assembling the base'), ('image24', 'First stand-in test')]),
       dict(title='The world around her', paras=[
         "The base connects to a 10-gauge wire frame I welded myself. Around the moving top I added EVA foam, sculpted mountains and valleys from spray foam, shaped them with a sander (gloves and mask on), and painted mottled layers to match Fantasia.",
@@ -126,7 +126,7 @@ NICK = [
   dict(
     slug='vidar', title='Vidar', card='The Silent God of Vengeance, with motion-driven lighting',
     subtitle='Vidar, Norse god of vengeance', event='Friday Night Costume Contest · Novice', cover='image17',
-    facts=[('Source art', 'Sam Flegal, Fateful Signs (with the artist’s permission)'), ('Design goal', 'Every lighting effect driven by motion. No switches on stage.'), ('Build time', 'About 350 hours over nine months'), ('Cost', 'Just under $200, plus about $150 in prototyping'), ('Fabrication', 'ABS printing and vapour smoothing, EVA thermoforming, laser cutting, resin, soft goods, LED wiring'), ('Software', '3D scanning, Blender, Autodesk Fusion, C++ on Arduino')],
+    facts=[('Source art', 'Sam Flegal, Fateful Signs (with the artist’s permission)'), ('Design goal', 'Every lighting effect driven by motion. No switches on stage.'), ('Build time', 'About 350 hours over nine months'), ('Cost', 'Just under $200, plus about $150 in prototyping'), ('Fabrication', 'ABS printing and vapor smoothing, EVA thermoforming, laser cutting, resin, soft goods, LED wiring'), ('Software', '3D scanning, Blender, Autodesk Fusion, C++ on Arduino')],
     intro=[
       "I found Vidar in the Dragon Con vendor hall in 2025, in a painting by Sam Flegal of Fateful Signs. Vidar is the silent son of Odin, the one who survives Ragnarök and avenges his father. Flegal gave him a heavy forged-stone body with fire running through the seams, and I kept walking back to the booth to look at it.",
       "I work backwards when I pick a costume: I decide what I want to learn to build, then find a character who gives me an excuse to build it. I’d been reading about accelerometer-driven LEDs for months. So I set one rule: no buttons. Every effect had to answer to something physical: how hard I hit the floor, how I’m holding the sword, or what kind of light is in the room.",
@@ -137,7 +137,7 @@ NICK = [
         "Three of the seven effects use no electronics at all. That was deliberate: every powered effect is one more battery to charge, one more connector to seat while dressing, and one more solder joint that can break mid-performance.",
       ], table=(['Piece', 'What it does', 'What triggers it'], [
         ['Greaves', 'A column of light climbs the leg and fades back down', 'Accelerometer at the heel reading foot-strike force'],
-        ['Sword', 'Colour and intensity shift as the blade comes up', 'IMU in the hilt tracking blade elevation'],
+        ['Sword', 'Color and intensity shift as the blade comes up', 'IMU in the hilt tracking blade elevation'],
         ['Shield', 'Runes glow in the dark; UV flare under blacklight; LEDs in light', 'Passive glow pigment under UV resin, plus flickering LEDs'],
         ['Collar', 'Warm gradient thrown up onto the jaw and mask', 'Constant-current LEDs through hand-painted cellophane'],
         ['Pauldrons', 'Eye sockets glow in a dim room', 'Passive glow pigment, no power'],
@@ -146,39 +146,39 @@ NICK = [
       dict(title='Greaves and leg lighting', paras=[
         "The legs carry most of the lighting, and the whole costume was designed around them. The greaves are body-molded thermoformed EVA with metallic gold fabric stretched over the inner structure and EVA plating on top.",
         "The gold isn’t just decoration: it’s a continuous reflector. The LED strands point inward at it, so light bounces and spreads instead of showing as a row of dots. That change did more for how the legs look than anything else I tried, and it cost about $12 in fabric.",
-        "The back of each greave hides a printed enclosure that reads as armour outside and works as a junction box inside: battery, microcontroller and wiring, with the Arduino reachable for tweaks. Two addressable RGB strands per leg are driven by an MPU6050 accelerometer reading vertical G-force on each step.",
+        "The back of each greave hides a printed enclosure that reads as armor outside and works as a junction box inside: battery, microcontroller and wiring, with the Arduino reachable for tweaks. Two addressable RGB strands per leg are driven by an MPU6050 accelerometer reading vertical G-force on each step.",
         "The firmware is a little over 500 lines of C++, with every tuning value as a named constant at the top of the file. Attack, hold and decay are borrowed from audio envelopes: a fast attack with a slow decay makes a step read as an impact, then lets the flame fade away.",
         "**What went wrong.** My first connectors were for 10 mm strands, not 8 mm. Fine on the bench, but bent into position they lost continuity. I spent a week rerunning wires and cutting open foam, only to find I’d used the connectors meant for my under-cabinet lights.",
-      ], images=[('image2', 'Dual LED strands laid into the greave, following pencilled layout lines'), ('image3', 'Rear junction box with the Nano, breadboard and wiring'), ('image4', 'Foam covering laid out during glue-up'), ('image5', 'The greave shell mid-build'), ('image6', 'Working schematic for the greave circuit'), ('image7', 'Firmware with every value as a named constant')]),
+      ], images=[('image2', 'Dual LED strands laid into the greave, following penciled layout lines'), ('image3', 'Rear junction box with the Nano, breadboard and wiring'), ('image4', 'Foam covering laid out during glue-up'), ('image5', 'The greave shell mid-build'), ('image6', 'Working schematic for the greave circuit'), ('image7', 'Firmware with every value as a named constant')]),
       dict(title='Sword', paras=[
-        "Vidar is the second strongest of the Norse gods, after Thor, so the sword had to hold its own next to a Mjölnir from the back of the ballroom. It weighs 6 lb: a 4 lb blade balanced by a 2 lb pommel that pulls the centre of mass back to my hand.",
-        "Blade, cavity, hilt and pommel were modelled from scratch in Blender. Twin dowel channels run through the blade, hilt and pommel and carry the load; without them a printed blade this long shears at the guard on the first real swing. It’s printed in ABS with a clear PETG core, and the Elder Futhark runes spell “vengeance”.",
+        "Vidar is the second strongest of the Norse gods, after Thor, so the sword had to hold its own next to a Mjölnir from the back of the ballroom. It weighs 6 lb: a 4 lb blade balanced by a 2 lb pommel that pulls the center of mass back to my hand.",
+        "Blade, cavity, hilt and pommel were modeled from scratch in Blender. Twin dowel channels run through the blade, hilt and pommel and carry the load; without them a printed blade this long shears at the guard on the first real swing. It’s printed in ABS with a clear PETG core, and the Elder Futhark runes spell “vengeance”.",
         "The guard began as a demon skull I split, mirrored and hollowed. It houses the microcontroller, orientation sensor and power, and lights the eye sockets from inside. As the blade rotates toward vertical, the light grows up the blade and brightens, following my movement live.",
-      ], images=[('image10', 'Blade modelled from scratch in Blender'), ('image11', 'Hilt electronics cavity, dowel spine visible'), ('image12', 'Hand-drawn sword schematic'), ('image13', 'The finished blade, lit')]),
+      ], images=[('image10', 'Blade modeled from scratch in Blender'), ('image11', 'Hilt electronics cavity, dowel spine visible'), ('image12', 'Hand-drawn sword schematic'), ('image13', 'The finished blade, lit')]),
       dict(title='Shield', paras=[
-        "Two feet across: any bigger and it covers the armour on stage and competes with the sword. (Also, foam board comes in 2 × 2 ft squares.) The core is high-density foam board, cut and grooved into planks and hand-scraped for grain, with six printed edge pieces for a proper Viking rim.",
+        "Two feet across: any bigger and it covers the armor on stage and competes with the sword. (Also, foam board comes in 2 × 2 ft squares.) The core is high-density foam board, cut and grooved into planks and hand-scraped for grain, with six printed edge pieces for a proper Viking rim.",
         "The laser etch was the most nerve-wracking stretch of the build. The shield is wider than the laser bed, so it went through in two angled passes with one shot to get it right. Then I deepened the channels with a soldering iron, melting foam on purpose, slowly, with ventilation and a respirator.",
-        "Each channel has red glow paint under clear UV-reactive resin, so it reads three ways: red in room light, a UV flare under blacklight, and only the runes glowing in full dark. The hub is a printed horned skull; one horn passes through the face to become the forearm support and grip. It’s my favourite mechanic in the whole costume.",
+        "Each channel has red glow paint under clear UV-reactive resin, so it reads three ways: red in room light, a UV flare under blacklight, and only the runes glowing in full dark. The hub is a printed horned skull; one horn passes through the face to become the forearm support and grip. It’s my favorite mechanic in the whole costume.",
         "**What I’d redo.** The resin leaked out of the channel ends before I could get the disc to the UV lamp. Next time I’ll seal the ends first and cure outside in the sun.",
       ], images=[('image14', 'Foam board core, cut for the skull hub'), ('image15', 'Opening the rune channels with a soldering iron, under a respirator'), ('image16', 'The shield in daylight'), ('image17', 'The shield in the dark'), ('image18', 'Painted skull and horn')]),
       dict(title='Helmet and face shield', paras=[
-        "No chin strap. The helmet holds by friction alone, which only works because it was modelled against a 3D scan of my own head. The face guard comes off independently, so I can pull it on stage to reveal a sealed mouth for the silent god.",
+        "No chin strap. The helmet holds by friction alone, which only works because it was modeled against a 3D scan of my own head. The face guard comes off independently, so I can pull it on stage to reveal a sealed mouth for the silent god.",
         "Micro-LEDs line the crown next to a small 5 V fan. The fan cools nothing: it moves air across cellophane flames so they shift and lift. Light alone gives a static glow; the airflow sells it as fire, and it’s the cheapest part of the build.",
       ], images=[('image19', 'Crown and face sculpt in Blender, against a scan of my head'), ('image20', 'Test-fitting the crown band and printed face shield'), ('image21', 'Painted crown and flames')]),
       dict(title='Pauldrons', paras=[
-        "Printed in ABS from heavily modified demon-skull models, reshaped wider and heavier, then vapour-smoothed to melt away the print lines.",
-        "They float. Magnets inside each pauldron meet magnets held to my skin with kinesiology tape: no harness, no strap across the chest. I can raise both arms overhead and they stay put, and I can wear them higher for physique display or lower for a more armoured look. The eye sockets are glow paint, with no power or wiring.",
-      ], images=[('image22', 'Crown and pauldron fit check'), ('image23', 'A pauldron after vapour smoothing'), ('image24', 'Glow pigment in the eye sockets')]),
+        "Printed in ABS from heavily modified demon-skull models, reshaped wider and heavier, then vapor-smoothed to melt away the print lines.",
+        "They float. Magnets inside each pauldron meet magnets held to my skin with kinesiology tape: no harness, no strap across the chest. I can raise both arms overhead and they stay put, and I can wear them higher for physique display or lower for a more armored look. The eye sockets are glow paint, with no power or wiring.",
+      ], images=[('image22', 'Crown and pauldron fit check'), ('image23', 'A pauldron after vapor smoothing'), ('image24', 'Glow pigment in the eye sockets')]),
       dict(title='Bracers, collar and boots', paras=[
         "**Bracers.** Structural EVA wrapped in the same gold fabric as the legs, painted with high-contrast shading and forced highlights so they look lit. There’s nothing electronic in them; elastic inside holds them to the forearm.",
         "**Collar.** An EVA frame carrying layered cellophane hand-painted with translucent acrylics, so the light builds a gradient. A constant-current LED strip at the back throws light up onto the jaw and mask.",
-        "**Boots.** Built last, on purpose, once I knew exactly where the greaves would sit. The EVA cladding is thermoformed at an angle into a landing ridge that the greave drops onto and locks, which stops the armour slipping down the calf. Then I found I couldn’t get my foot in, so the ankle build-up moved onto the greave with its own Velcro closure.",
+        "**Boots.** Built last, on purpose, once I knew exactly where the greaves would sit. The EVA cladding is thermoformed at an angle into a landing ridge that the greave drops onto and locks, which stops the armor slipping down the calf. Then I found I couldn’t get my foot in, so the ankle build-up moved onto the greave with its own Velcro closure.",
       ], images=[('image25', 'Inside the bracer: EVA frame and elastic'), ('image26', 'Painted and unpainted bracers'), ('image27', 'Collar, before painting')]),
       dict(title='Power and getting dressed', paras=[
         "Every active effect runs on its own pack, so a dead battery costs one effect, not the costume. Every housing can be charged without opening it, a requirement for charging everything overnight in a hotel room between shows.",
       ], steps=[
         'Charge check and skin prep: kinesiology tape and magnet pads on both shoulders.',
-        'Step into the waist piece and leggings; secure the thigh armour.',
+        'Step into the waist piece and leggings; secure the thigh armor.',
         'Power on the greaves, fasten them, step into the boots and seat the greaves on the landing ridge.',
         'Power on the collar, attach the pauldrons magnetically, drop the collar over the neck.',
         'Fit the face guard, then the crown; power the crown LEDs and start the flame fan.',

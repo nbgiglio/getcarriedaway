@@ -120,8 +120,7 @@ SHOT = '''<svg viewBox="0 0 560 400" preserveAspectRatio="xMidYMid slice" role="
 home = head('Get Carrie’d Away', "Cosplay and costuming by Carrie and Nick, plus the tools we build to make it.") + header('home') + f'''<main>
 <section class="wrap hero" id="about-carrie" aria-labelledby="about-carrie-h">
 <div>
-<span class="eyebrow accent">About Carrie</span>
-<h1 id="about-carrie-h">Carrie</h1>
+<h1 id="about-carrie-h" class="eyebrow accent">About Carrie</h1>
 <p class="lead">[Carrie's bio, first paragraph: who she is, how she got into costuming, what she loves to build.]</p>
 <p class="lead">[Second paragraph: favourite materials and techniques, where she wears her builds, what she's working on now.]</p>
 <div class="row"><a class="btn accent" href="/carrie/">See Carrie's work</a><a class="btn line accent" href="/nick/">Nick's work</a></div>
@@ -129,7 +128,7 @@ home = head('Get Carrie’d Away', "Cosplay and costuming by Carrie and Nick, pl
 <div class="ph dashed portrait"><span class="label">[PHOTO · CARRIE]</span><span class="notch t"></span><span class="notch b"></span><span class="notch l"></span><span class="notch r"></span><span class="tag">CUT 1 · PLACE ON FOLD</span></div>
 </section>
 <section class="wrap section">
-<div class="sec-head"><h2>Cosplay, costuming and the tools to make them</h2><span class="eyebrow">Portfolios</span></div>
+<div class="sec-head"><div style="display:flex;flex-direction:column;gap:20px"><span class="eyebrow accent">Cosplay, costuming and the tools to make them</span><h2 style="font-size:clamp(40px,4.6vw,56px);line-height:1">Portfolios</h2></div></div>
 <div class="makers">
 <a class="maker" href="/carrie/"><div class="ph"><span class="label">[PHOTO · CARRIE IN COSTUME]</span></div><div class="top"><span class="display">Carrie's Work</span><span class="see">See all →</span></div><span class="muted">[One line about Carrie: what she builds, favourite materials, characters.]</span></a>
 <a class="maker" href="/nick/"><div class="ph"><span class="label">[PHOTO · NICK IN COSTUME]</span></div><div class="top"><span class="display">Nick's Work</span><span class="see">See all →</span></div><span class="muted">[One line about Nick: armour, props, electronics, whatever he's known for.]</span></a>

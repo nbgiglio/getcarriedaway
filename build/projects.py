@@ -150,6 +150,7 @@ NICK = [
     ],
     quote='Step hard and more of the leg lights up. Stand still and it settles back to a low ember.',
     sections=[
+      dict(title='On stage', paras=[], images=[('stage', 'On stage. Photo © Badger Studios')]),
       dict(title='How each piece responds', paras=[
         "Three of the seven effects use no electronics at all. That was deliberate: every powered effect is one more battery to charge, one more connector to seat while dressing, and one more solder joint that can break mid-performance.",
       ], table=(['Piece', 'What it does', 'What triggers it'], [
@@ -214,4 +215,28 @@ NICK = [
     facts=[('Character', 'The Rocketeer'), ('Year', '2024')],
     intro=[], quote=None,
     sections=[dict(title='Photos', paras=[], images=[('front', 'Helmet, jacket and Mauser'), ('jetpack', 'The twin-rocket jet pack')])]),
+  dict(
+    slug='spartan-warrior', title='Spartan Warrior', card='Bronze helmet, shield and spear, marching with the phalanx',
+    subtitle='Spartan Warrior', event='', cover='parade',
+    facts=[('Character', 'Spartan warrior')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('parade', 'Marching in the parade'), ('profile', 'Helmet, shield and spear')])]),
+  dict(
+    slug='turok-dinosaur-hunter', title='Turok Dinosaur Hunter', card='Beaded breastplate, flint spear and a stack of trophy raptors',
+    subtitle='Turok Dinosaur Hunter', event='', cover='front',
+    facts=[('Character', 'Turok')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('front', 'Spear stacked with raptor heads'), ('with-carrie', 'With Carrie')])]),
+  dict(
+    slug='duffman', title='Duffman', card='Oh yeah. Cape, cans and a well-earned rest',
+    subtitle='Duffman', event='', cover='front',
+    facts=[('Character', 'Duffman'), ('Source', 'The Simpsons')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('front', 'Off duty')])]),
+  dict(
+    slug='halloween-masquerade', title='Halloween Masquerade', card='Metal masks, a brocade vest and a war hammer',
+    subtitle='Halloween Masquerade', event='', cover='mask-night',
+    facts=[('Occasion', 'Halloween masquerade')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('mask-night', 'Mask and war hammer'), ('mask-day', 'Filigree mask and brocade vest')])]),
 ]

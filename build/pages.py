@@ -206,7 +206,7 @@ files = {
  'index.html': home,
  'carrie/index.html': _pp.portfolio(head, header, footer, 'carrie', 'Carrie', "[A short intro from Carrie: how she got into costuming, what she loves to build, where she wears it.]",
    ['Spin the Dawn', 'Snow White', 'Little Mermaid', 'Great Comet of 1812', 'Creaturess from the Black Lagoon', 'Percy Jackson & The Lightning Thief', 'The Never Ending Story', 'Beetlejuice', 'Bunny the Clown'], CARRIE, {'Little Mermaid': '2023'}),
- 'nick/index.html': _pp.portfolio(head, header, footer, 'nick', 'Nick', "[A short intro from Nick: how he got into costuming, what he loves to build, where he wears it.]", ['Vidar', 'Spartan Warrior', 'Juggernaut', 'Turok Dinosaur Hunter', 'Nappa', 'Rocketeer', 'Mr. Clean'], NICK, {'Rocketeer': '2024', 'Mr. Clean': '2024'}),
+ 'nick/index.html': _pp.portfolio(head, header, footer, 'nick', 'Nick', "[A short intro from Nick: how he got into costuming, what he loves to build, where he wears it.]", ['Vidar', 'Spartan Warrior', 'Juggernaut', 'Turok Dinosaur Hunter', 'Nappa', 'Rocketeer', 'Mr. Clean', 'Duffman', 'Halloween Masquerade'], NICK, {'Rocketeer': '2024', 'Mr. Clean': '2024'}),
  **{f'carrie/{d["slug"]}/index.html': _pp.project_page(head, header, footer, 'carrie', 'Carrie', d) for d in CARRIE},
  **{f'nick/{d["slug"]}/index.html': _pp.project_page(head, header, footer, 'nick', 'Nick', d) for d in NICK},
  'tools/lightbench/index.html': instr,

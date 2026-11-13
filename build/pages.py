@@ -4,6 +4,7 @@ Edit this file, not the generated HTML, then run:  python3 build/pages.py .
 The header menu, footer and page bodies all come from here.
 """
 import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 root = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), '..')
 APP = '/tools/lightbench/app/'
 LOGO = '<svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><path d="M6 6h24v24H6z" fill="none" stroke="#ffb84d" stroke-width="2" stroke-dasharray="4 3"/><path d="M18 6v6M18 30v-6M6 18h6M30 18h-6" stroke="#ff86a8" stroke-width="2.5"/></svg>'
@@ -161,21 +162,8 @@ home = head('Get Carrie’d Away', "Cosplay and costuming by Carrie and Nick, pl
 </main>
 ''' + footer()
 
-def portfolio(key, who, intro, projects):
-    import html
-    cards = ''.join(f'''<article class="project"><div class="ph"><span class="label">[PHOTO]</span></div><div class="top"><span class="display">{html.escape(n)}</span><span class="yr">[Year]</span></div><span class="muted" style="font-size:14px">[Character · one line about the build]</span></article>
-''' for n in projects)
-    other = ('/nick/', "Nick's Work →") if key == 'carrie' else ('/carrie/', "Carrie's Work →")
-    return head(f"{who}'s Work · Get Carrie’d Away", f"Cosplay and costume builds by {who}.") + header(key) + f'''<main class="wrap">
-<section class="page-head">
-<div><span class="eyebrow accent">Portfolio</span><h1>{who}'s Work</h1><p class="lead">{intro}</p></div>
-<span class="eyebrow">{len(projects)} project{'s' if len(projects) != 1 else ''}</span>
-</section>
-<section class="projects" aria-label="Projects">
-{cards}</section>
-<p style="padding-bottom:48px"><a href="{other[0]}" style="color:var(--accent);font-weight:600;text-decoration:none">{other[1]}</a></p>
-</main>
-''' + footer()
+import project_pages as _pp
+from projects import CARRIE, NICK
 
 steps = [
  ('Calibrate to your mat', 'On the Mat tab, type the size of your mat or of a rectangle printed on it. Tap Match the corners and drag A, B, C and D onto its corners. Use the arrows for the last few pixels, then Save the setup so you only do this once.', 'PHOTO · CORNERS ON MAT'),
@@ -216,9 +204,11 @@ instr = head('Lightbench · Get Carrie’d Away', 'How to project sewing pattern
 
 files = {
  'index.html': home,
- 'carrie/index.html': portfolio('carrie', 'Carrie', "[A short intro from Carrie: how she got into costuming, what she loves to build, where she wears it.]",
-   ['Snow White', 'Little Mermaid', 'Great Comet of 1812', 'Creaturess from the Black Lagoon', 'Percy Jackson & The Lightning Thief', 'The Never Ending Story', 'Beetlejuice', 'Bunny the Clown']),
- 'nick/index.html': portfolio('nick', 'Nick', "[A short intro from Nick: how he got into costuming, what he loves to build, where he wears it.]", ['Vidar', 'Spartan Warrior', 'Juggernaut', 'Turok Dinosaur Hunter', 'Nappa', 'Rocketeer', 'Mr. Clean']),
+ 'carrie/index.html': _pp.portfolio(head, header, footer, 'carrie', 'Carrie', "[A short intro from Carrie: how she got into costuming, what she loves to build, where she wears it.]",
+   ['Spin the Dawn', 'Snow White', 'Little Mermaid', 'Great Comet of 1812', 'Creaturess from the Black Lagoon', 'Percy Jackson & The Lightning Thief', 'The Never Ending Story', 'Beetlejuice', 'Bunny the Clown'], CARRIE),
+ 'nick/index.html': _pp.portfolio(head, header, footer, 'nick', 'Nick', "[A short intro from Nick: how he got into costuming, what he loves to build, where he wears it.]", ['Vidar', 'Spartan Warrior', 'Juggernaut', 'Turok Dinosaur Hunter', 'Nappa', 'Rocketeer', 'Mr. Clean'], NICK),
+ **{f'carrie/{d["slug"]}/index.html': _pp.project_page(head, header, footer, 'carrie', 'Carrie', d) for d in CARRIE},
+ **{f'nick/{d["slug"]}/index.html': _pp.project_page(head, header, footer, 'nick', 'Nick', d) for d in NICK},
  'tools/lightbench/index.html': instr,
  '404.html': head('Not found · Get Carrie’d Away', 'Page not found.') + header('') + '<main class="wrap page-head"><div><span class="eyebrow accent">404</span><h1>That page wandered off.</h1><p class="lead">Try the menu, or go back to the <a href="/" style="color:var(--accent)">home page</a>.</p></div></main>\n' + footer(),
 }

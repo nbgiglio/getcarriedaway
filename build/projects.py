@@ -8,7 +8,7 @@ Images live in <person>/<slug>/img/<stem>.jpg (large) and <stem>-sm.jpg (thumbna
 
 CARRIE = [
   dict(
-    slug='spin-the-dawn', title='Spin the Dawn', card='The Blood of the Stars wedding dress',
+    slug='spin-the-dawn', year='2026', title='Spin the Dawn', card='The Blood of the Stars wedding dress',
     subtitle='Maia Tamarin · Spin the Dawn by Elizabeth Lim', event='Dragon Con Page to Stage · Journeyman', cover='i-000',
     facts=[('Character', 'Maia Tamarin'), ('Source', 'Spin the Dawn, Elizabeth Lim (2019)'), ('Contest', 'Dragon Con Page to Stage'), ('Skill tier', 'Journeyman'), ('Cost', 'About $200'), ('Pattern', 'Self-designed')],
     intro=[
@@ -51,7 +51,7 @@ CARRIE = [
       ], images=[]),
     ]),
   dict(
-    slug='snow-white', title='Snow White: The Light Within', card='A lamp-shaped clear skirt lit from within, with a stained-glass panel for each dwarf',
+    slug='snow-white', year='2024', title='Snow White: The Light Within', card='A lamp-shaped clear skirt lit from within, with a stained-glass panel for each dwarf',
     subtitle='Snow White, reimagined', event='', cover='finished',
     facts=[('Character', 'Snow White'), ('Skirt', 'Clear Worbla over a welded wire frame'), ('Lighting', '80 tea lights'), ('Panels', 'One for each of the seven dwarves')],
     intro=[
@@ -79,7 +79,7 @@ CARRIE = [
       ], images=[('shoe-pearls', 'Velvet shoe with chiffon puffs, pearl buttons and gold rhinestone trim'), ('shoe-stones', 'The second shoe in progress, with blue stones between the puffs')]),
     ]),
   dict(
-    slug='neverending-story', title='The NeverEnding Story', card='The Childlike Empress, with Falkor and Gmork in orbit',
+    slug='neverending-story', year='2025', title='The NeverEnding Story', card='The Childlike Empress, with Falkor and Gmork in orbit',
     subtitle='The Childlike Empress · The NeverEnding Story', event='Friday Night Costume Contest 2025', cover='image38',
     facts=[('Character', 'The Childlike Empress'), ('Source', 'The NeverEnding Story (1984)'), ('Contest', 'Friday Night Costume Contest 2025'), ('Mechanism', '3D-printed geared track, 6 V motor'), ('Rotation', 'About 45 seconds per revolution')],
     intro=[
@@ -119,11 +119,23 @@ CARRIE = [
         "Finally I step inside, drop the skirt over the structure and become the Childlike Empress, with the mechanics hidden beneath. A mechanical, electrical build wrapped in cosplay magic: a mixed-media tribute to a mixed-media movie, and a reminder to keep imagination alive.",
       ], images=[('image35', 'Final assembly'), ('image36', 'The finished base'), ('image37', 'Motor and battery underneath'), ('image38', 'Finished'), ('image39', 'In motion'), ('image40', 'Falkor and Gmork in orbit')]),
     ]),
+  dict(
+    slug='bunny-the-clown', year='2026', title='Bunny the Clown', card='Buggy the Clown from One Piece, bunny style',
+    subtitle='Buggy the Clown · One Piece', event='', cover='front',
+    facts=[('Character', 'Buggy the Clown'), ('Source', 'One Piece'), ('Year', '2026')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('front', 'Knife-fingered gloves, striped corset and treasure-chest purse'), ('pose', 'The cape, fur collar and boots'), ('convention-wide', 'At the convention')])]),
+  dict(
+    slug='creaturess-from-the-black-lagoon', year='2026', title='Creaturess from the Black Lagoon', card='The Creature from the Black Lagoon, reimagined as a scaled gown',
+    subtitle='The Creature from the Black Lagoon, reimagined', event='', cover='front',
+    facts=[('Character', 'The Creature from the Black Lagoon'), ('Year', '2026')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('front', 'Layered scales, gold breastplate and kelp-trimmed hem'), ('pose', 'Feathered headpiece and webbed gloves')])]),
 ]
 
 NICK = [
   dict(
-    slug='vidar', title='Vidar', card='The Silent God of Vengeance, with motion-driven lighting',
+    slug='vidar', year='2026', title='Vidar', card='The Silent God of Vengeance, with motion-driven lighting',
     subtitle='Vidar, Norse god of vengeance', event='Friday Night Costume Contest · Novice', cover='finished',
     facts=[('Source art', 'Sam Flegal, Fateful Signs (with the artist’s permission)'), ('Design goal', 'Every lighting effect driven by motion. No switches on stage.'), ('Build time', 'About 350 hours over nine months'), ('Cost', 'Just under $200, plus about $150 in prototyping'), ('Fabrication', 'ABS printing and vapor smoothing, EVA thermoforming, laser cutting, resin, soft goods, LED wiring'), ('Software', '3D scanning, Blender, Autodesk Fusion, C++ on Arduino')],
     intro=[

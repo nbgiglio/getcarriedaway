@@ -13,7 +13,8 @@ def _slug(n):
 ALIASES = {'the-never-ending-story': 'neverending-story'}
 
 
-def portfolio(head, header, footer, key, who, intro, names, docs):
+def portfolio(head, header, footer, key, who, intro, names, docs, years=None):
+    years = years or {}
     by = {}
     for d in docs:
         by[d['slug']] = d
@@ -28,13 +29,13 @@ def portfolio(head, header, footer, key, who, intro, names, docs):
             ev = f'<span class="ev">{html.escape(d["event"])}</span>' if d['event'] else ''
             cards.append(
                 f'<a class="project" href="/{key}/{d["slug"]}/"><div class="ph">{img}</div>'
-                f'<div class="top"><span class="display">{html.escape(d["title"])}</span></div>{ev}'
+                f'<div class="top"><span class="display">{html.escape(d["title"])}</span><span class="yr">{d.get("year", "")}</span></div>{ev}'
                 f'<span class="muted" style="font-size:14px">{html.escape(d["card"])}</span>'
-                f'<span class="read">Read the build →</span></a>')
+                f'<span class="read">{"Read the build" if d["intro"] else "See the photos"} →</span></a>')
         else:
             cards.append(
                 f'<article class="project"><div class="ph"><span class="label">[PHOTO]</span></div>'
-                f'<div class="top"><span class="display">{html.escape(n)}</span><span class="yr">[Year]</span></div>'
+                f'<div class="top"><span class="display">{html.escape(n)}</span><span class="yr">{years.get(n, "[Year]")}</span></div>'
                 f'<span class="muted" style="font-size:14px">[Character · one line about the build]</span></article>')
     other = ('/nick/', 'Nick\'s Work →') if key == 'carrie' else ('/carrie/', 'Carrie\'s Work →')
     count = f'{len(names)} project{"s" if len(names) != 1 else ""}'
@@ -63,7 +64,8 @@ def project_page(head, header, footer, key, who, d):
         cover = f'<figure class="proj-cover"><img src="{base}{d["cover"]}.jpg" alt="{html.escape(d["title"])}"></figure>'
     else:
         cover = '<div class="ph dashed proj-cover"><span class="label">[PHOTO · THE FINISHED COSTUME]</span></div>'
-    facts = ''.join(f'<div><dt>{html.escape(a)}</dt><dd>{html.escape(b)}</dd></div>' for a, b in d['facts'])
+    fl = list(d['facts']) + ([('Year', d['year'])] if d.get('year') and not any(k == 'Year' for k, _ in d['facts']) else [])
+    facts = ''.join(f'<div><dt>{html.escape(a)}</dt><dd>{html.escape(b)}</dd></div>' for a, b in fl)
     secs = []
     for s in d['sections']:
         body = ''.join(f'<p>{_md(x)}</p>' for x in s.get('paras', []))

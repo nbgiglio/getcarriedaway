@@ -196,4 +196,10 @@ NICK = [
         'Power on the sword and shield, and check the sword responds to rotation.',
       ], images=[]),
     ]),
+  dict(
+    slug='mr-clean', year='2024', title='Mr. Clean', card='Spotless whites, bright brows, mop at the ready',
+    subtitle='Mr. Clean', event='', cover='front',
+    facts=[('Character', 'Mr. Clean'), ('Year', '2024')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('front', 'Arms crossed, mop at the ready')])]),
 ]

@@ -131,6 +131,12 @@ CARRIE = [
     facts=[('Character', 'The Creature from the Black Lagoon'), ('Year', '2026')],
     intro=[], quote=None,
     sections=[dict(title='Photos', paras=[], images=[('front', 'Layered scales, gold breastplate and kelp-trimmed hem'), ('pose', 'Feathered headpiece and webbed gloves')])]),
+  dict(
+    slug='beetlejuice', year='2024', title='Beetlejuice', card='Beetlejuice, bunny style, from the floor to the Dragon Con stage',
+    subtitle='Beetlejuice', event='', cover='convention',
+    facts=[('Character', 'Beetlejuice'), ('Year', '2024')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('convention', 'Striped corset, sandworm ears and glitter-green heels'), ('stage', 'On the Dragon Con stage')])]),
 ]
 
 NICK = [
@@ -202,4 +208,10 @@ NICK = [
     facts=[('Character', 'Mr. Clean'), ('Year', '2024')],
     intro=[], quote=None,
     sections=[dict(title='Photos', paras=[], images=[('front', 'Arms crossed, mop at the ready')])]),
+  dict(
+    slug='rocketeer', year='2024', title='Rocketeer', card='Gold helmet, bomber jacket and twin-rocket jet pack',
+    subtitle='The Rocketeer', event='', cover='front',
+    facts=[('Character', 'The Rocketeer'), ('Year', '2024')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('front', 'Helmet, jacket and Mauser'), ('jetpack', 'The twin-rocket jet pack')])]),
 ]

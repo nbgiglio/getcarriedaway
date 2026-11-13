@@ -117,7 +117,7 @@ CARRIE = [
       dict(title='Assembly and reveal', paras=[
         "Final assembly was the most stressful step: omnidirectional wheels on the base, the printed motor mounts and gears pushed in until they meshed, then glued and bolted. The motor runs from a 6 V battery; one revolution takes about 45 seconds. The dress frame bolts to the base, the background mounts to the track, and Gmork and Falkor slide onto their rod.",
         "Finally I step inside, drop the skirt over the structure and become the Childlike Empress, with the mechanics hidden beneath. A mechanical, electrical build wrapped in cosplay magic: a mixed-media tribute to a mixed-media movie, and a reminder to keep imagination alive.",
-      ], images=[('image35', 'Final assembly'), ('image36', 'The finished base'), ('image37', 'Motor and battery underneath'), ('image38', 'Finished'), ('image39', 'In motion'), ('image40', 'Falkor and Gmork in orbit')]),
+      ], images=[('image35', 'Final assembly'), ('image36', 'The finished base'), ('image37', 'Motor and battery underneath'), ('image38', 'Finished'), ('image39', 'In motion'), ('image40', 'Falkor and Gmork in orbit'), ('falkor-orbit.mp4', 'Falkor circling, lit by the glowing Auryn'), ('convention-falkor-gmork', 'At Dragon Con 2025, with Gmork at her feet and Bastian painted on the base'), ('gown-convention', 'The Southern Oracle shoulders and quilted pearl gown')]),
     ]),
   dict(
     slug='bunny-the-clown', year='2026', title='Bunny the Clown', card='Buggy the Clown from One Piece, bunny style',

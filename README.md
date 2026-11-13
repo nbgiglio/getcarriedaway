@@ -1,4 +1,4 @@
-# Get Carried Away
+# Get Carrie’d Away
 
 Cosplay and costuming portfolio for Carrie and Nick, plus the tools we build. Live at https://getcarriedaway.art.
 

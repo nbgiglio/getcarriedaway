@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 -36 184 236" width="184" height="236"><g transform="translate(0 0) scale(1)">
-<polygon points="30,18 75,13 140,51 132,190 18,190" fill="none" stroke="#17171a" stroke-width="5" stroke-linejoin="round"/>
-<line x1="75" y1="13" x2="140" y2="51" stroke="#f7b34c" stroke-width="4" stroke-dasharray="8 7" stroke-linecap="round"/>
-<line x1="72" y1="160" x2="72" y2="70" stroke="#17171a" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round"/>
-<polyline points="62,84 72,68 82,84" fill="none" stroke="#17171a" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="18,112 32,120 18,128" fill="#f7b34c"/>
-<polygon points="75,13 120,8 140,51" fill="#ff8fab" stroke="#ff8fab" stroke-width="5" stroke-linejoin="round" transform="translate(28 -26) rotate(16 112 24)"/>
-</g></svg>

@@ -216,13 +216,13 @@ NICK = [
     intro=[], quote=None,
     sections=[dict(title='Photos', paras=[], images=[('front', 'Helmet, jacket and Mauser'), ('jetpack', 'The twin-rocket jet pack')])]),
   dict(
-    slug='spartan-warrior', title='Spartan Warrior', card='Bronze helmet, shield and spear, marching with the phalanx',
+    slug='spartan-warrior', year='2026', title='Spartan Warrior', card='Bronze helmet, shield and spear, marching with the phalanx',
     subtitle='Spartan Warrior', event='', cover='parade',
     facts=[('Character', 'Spartan warrior')],
     intro=[], quote=None,
     sections=[dict(title='Photos', paras=[], images=[('parade', 'Marching in the parade'), ('profile', 'Helmet, shield and spear')])]),
   dict(
-    slug='turok-dinosaur-hunter', title='Turok Dinosaur Hunter', card='Beaded breastplate, flint spear and a stack of trophy raptors',
+    slug='turok-dinosaur-hunter', year='2024', title='Turok Dinosaur Hunter', card='Beaded breastplate, flint spear and a stack of trophy raptors',
     subtitle='Turok Dinosaur Hunter', event='', cover='front',
     facts=[('Character', 'Turok')],
     intro=[], quote=None,
@@ -234,7 +234,7 @@ NICK = [
     intro=[], quote=None,
     sections=[dict(title='Photos', paras=[], images=[('convention', 'Oh yeah! Cape, cap and a belt of Duff'), ('cans', 'Can in hand, shades on'), ('front', 'Off duty')])]),
   dict(
-    slug='halloween-masquerade', title='Halloween Masquerade', card='Metal masks, a brocade vest and a war hammer',
+    slug='halloween-masquerade', year='2026', title='Halloween Masquerade', card='Metal masks, a brocade vest and a war hammer',
     subtitle='Halloween Masquerade', event='', cover='mask-night',
     facts=[('Occasion', 'Halloween masquerade')],
     intro=[], quote=None,

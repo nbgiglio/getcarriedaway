@@ -228,15 +228,21 @@ NICK = [
     intro=[], quote=None,
     sections=[dict(title='Photos', paras=[], images=[('front', 'Spear stacked with raptor heads'), ('with-carrie', 'With Carrie')])]),
   dict(
-    slug='duffman', title='Duffman', card='Oh yeah. Cape, cans and a well-earned rest',
-    subtitle='Duffman', event='', cover='front',
+    slug='duffman', year='2026', title='Duffman', card='Oh yeah. Cape, cans and a well-earned rest',
+    subtitle='Duffman', event='', cover='convention',
     facts=[('Character', 'Duffman'), ('Source', 'The Simpsons')],
     intro=[], quote=None,
-    sections=[dict(title='Photos', paras=[], images=[('front', 'Off duty')])]),
+    sections=[dict(title='Photos', paras=[], images=[('convention', 'Oh yeah! Cape, cap and a belt of Duff'), ('cans', 'Can in hand, shades on'), ('front', 'Off duty')])]),
   dict(
     slug='halloween-masquerade', title='Halloween Masquerade', card='Metal masks, a brocade vest and a war hammer',
     subtitle='Halloween Masquerade', event='', cover='mask-night',
     facts=[('Occasion', 'Halloween masquerade')],
     intro=[], quote=None,
     sections=[dict(title='Photos', paras=[], images=[('mask-night', 'Mask and war hammer'), ('mask-day', 'Filigree mask and brocade vest')])]),
+  dict(
+    slug='denton-van-zan', year='2025', title='Denton Van Zan', card='The dragon slayer from Reign of Fire, axe in hand',
+    subtitle='Denton Van Zan · Reign of Fire', event='', cover='axe',
+    facts=[('Character', 'Denton Van Zan'), ('Source', 'Reign of Fire (2002)')],
+    intro=[], quote=None,
+    sections=[dict(title='Photos', paras=[], images=[('axe', 'Shearling vest, ammo belt and the dragon-hunting axe'), ('mirror', 'Fitting check: tattoos and fatigues')])]),
 ]

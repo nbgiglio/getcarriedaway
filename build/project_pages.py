@@ -52,6 +52,10 @@ def project_page(head, header, footer, key, who, d):
 
     def fig(stem, cap):
         c = html.escape(cap)
+        if stem.endswith('.mp4'):
+            v = stem[:-4]
+            return (f'<figure><div class="vid"><video src="{base}{stem}" poster="{base}{v}-poster.jpg" autoplay muted loop playsinline aria-label="{c}"></video></div>'
+                    f'<figcaption>{c}</figcaption></figure>')
         return (f'<figure><a href="{base}{stem}.jpg" target="_blank" rel="noopener">'
                 f'<img src="{base}{stem}-sm.jpg" alt="{c}" loading="lazy"></a><figcaption>{c}</figcaption></figure>')
 

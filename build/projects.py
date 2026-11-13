@@ -52,7 +52,7 @@ CARRIE = [
     ]),
   dict(
     slug='snow-white', title='Snow White: The Light Within', card='A lamp-shaped clear skirt lit from within, with a stained-glass panel for each dwarf',
-    subtitle='Snow White, reimagined', event='', cover=None,
+    subtitle='Snow White, reimagined', event='', cover='finished',
     facts=[('Character', 'Snow White'), ('Skirt', 'Clear Worbla over a welded wire frame'), ('Lighting', '80 tea lights'), ('Panels', 'One for each of the seven dwarves')],
     intro=[
       "The Light Within is a dream-like personification of Snow White’s personality: full of love and light. She shines brightly no matter how strange or terrifying her situation is.",
@@ -60,13 +60,12 @@ CARRIE = [
     ],
     quote=None,
     sections=[
-      dict(title='Starting point', paras=[], images=[('i-000', 'The AI rendering the design started from')]),
       dict(title='The lamp skirt', paras=[
         "This skirt was my first dive into thermoplastics (I know, ambitious). I wanted to keep the traditional princess skirt from the 1600s, gathered at the top, while giving the lamp shape a nod.",
         "I made a panel mock-up in fabric, measured the sections, then cut 10-gauge aluminum wire to size. Bending became easier once I built a wooden curve to heat the wire on. I welded the pieces together with a blowtorch (so. hot.).",
         "Then I used a heat gun to work clear TransparArt Worbla into a flowing gown shape. I learned many expensive lessons molding it, but the result was wonderful: a clear skirt.",
         "Next came the hand-cut EVA pieces. I designed each panel to feature one of the seven dwarves, with floral details and lines reminiscent of stained glass. Last, I painted the skirt with acrylic thinned with clear glue so the 80 tea lights on my homemade underskirt could shine through. I added a bow to the back and called it done.",
-      ], images=[]),
+      ], images=[('skirt-lit', 'The finished lamp skirt, lit from inside'), ('skirt-happy', 'Happy, one of the seven stained-glass dwarf panels'), ('apple-panel.mp4', 'An apple cartouche glowing through the clear Worbla'), ('i-000', 'The AI rendering the design started from')]),
       dict(title='Corset top and sleeves', paras=[
         "I loved the off-the-shoulder look and wanted my design to be unique from the Disney version. I love 1800s femininity, so I designed the corset after that era. The apples, beading and boning trim are all handmade and hand sewn.",
         "The sleeves are TransparArt Worbla shaped over a glass pumpkin. The backgrounds are my paintings of the castle and the dwarves’ cottage, with small trees made from 3D-printer scraps and EVA, finished with white pearl and net trim.",
@@ -77,7 +76,7 @@ CARRIE = [
       ], images=[]),
       dict(title='Shoes', paras=[
         "The shoes nod to 1600s German style. I covered them in fabric and cut holes for white fabric to pop through, added embellishments around each hole with a small blue stone between each for depth, and finished the heels with gold trim to tie the look together.",
-      ], images=[]),
+      ], images=[('shoe-pearls', 'Velvet shoe with chiffon puffs, pearl buttons and gold rhinestone trim'), ('shoe-stones', 'The second shoe in progress, with blue stones between the puffs')]),
     ]),
   dict(
     slug='neverending-story', title='The NeverEnding Story', card='The Childlike Empress, with Falkor and Gmork in orbit',

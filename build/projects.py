@@ -124,7 +124,7 @@ CARRIE = [
 NICK = [
   dict(
     slug='vidar', title='Vidar', card='The Silent God of Vengeance, with motion-driven lighting',
-    subtitle='Vidar, Norse god of vengeance', event='Friday Night Costume Contest · Novice', cover='image17',
+    subtitle='Vidar, Norse god of vengeance', event='Friday Night Costume Contest · Novice', cover='finished',
     facts=[('Source art', 'Sam Flegal, Fateful Signs (with the artist’s permission)'), ('Design goal', 'Every lighting effect driven by motion. No switches on stage.'), ('Build time', 'About 350 hours over nine months'), ('Cost', 'Just under $200, plus about $150 in prototyping'), ('Fabrication', 'ABS printing and vapor smoothing, EVA thermoforming, laser cutting, resin, soft goods, LED wiring'), ('Software', '3D scanning, Blender, Autodesk Fusion, C++ on Arduino')],
     intro=[
       "I found Vidar in the Dragon Con vendor hall in 2025, in a painting by Sam Flegal of Fateful Signs. Vidar is the silent son of Odin, the one who survives Ragnarök and avenges his father. Flegal gave him a heavy forged-stone body with fire running through the seams, and I kept walking back to the booth to look at it.",
